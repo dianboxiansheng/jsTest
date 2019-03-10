@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//5.1
+//编写一个函数 f(x) = 4x2+3x+2，使用户通过提示对话框输入x的值，能得到相应的计算结果
+/*        var x=prompt("请输入X");
+        var f;
+        f=4*2+3*x+2;
+        document.write(f);
+*/
+
+
+
+
+//5.2
+//编写一个函数Min(x,y)求出x,y这两个数中的最小值，要求x,y的值由用户通过提示对话框输入
+/*        var x,y,z;
+        x=prompt("请输入x");
+        y=prompt("请输入y");
+        function min(x,y)
+        {
+            if(x<=y)
+            {
+                return y;
+            }
+            else
+            {
+                return x;
+            }
+        }
+        z=min(x,y);
+        document.write(z);*/
+
+
+
+//5.3
+//编写一个判断某个非负整数是否能够同时被3,5,7整除的函数，然后在页面上输出1~1000之间所有能同时被3,5,7整除的整数，
+//并要求每行显示6个这样的数。
+/*        function f357()
+       {
+            var sum=0;
+            for(i=1;i<=1000;i++)
+            {
+                if( i%3==0 && i%5==0 && i%7==0 )
+                {
+                    document.write(i+" ");
+                    sum++;
+                    if(sum%6==0)
+                    {
+                        document.write("<br>");
+                    }
+                }
+                
+            }
+       }
+       f357();*/
+
+
+//5.4
+//在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
+//只被1和其自身除
+
+/*        var sum=0;
+        for(i=1;i<1000;i++)
+        {
+            var a=true;
+            for(j=1;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                   break;
+                   a=false;
+                }
+           }
+           if(a==true)
+           {
+               document.write(i+" ");
+               sum++;
+               if(sum%6==0)
+               {
+                   document.write("<br>");
+               }
+           }
+       }
+*/
+
+
+
+//5.5
+//编写一个非递归函数factorial(n)，计算12!-10!的结果
+/*        function factorial(n)
+        {
+            var j=1;
+            for(i=1;i<=n;i++)
+            {
+                j=j*i;
+            }
+            return j;
+        }
+        var a,b,c;
+        a=factorial(12);
+        b=factorial(10);
+        c=a-b;
+        document.write(c);
+*/
+
+
+
+
+
+//5.7
+//斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
+//试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
+// 1 1 2 3 5 8 13 21 34
+//递归
+        var x,f=prompt("请输入斐波那契数列项数");
+        function fib(n)
+        {
+            if(n==1||n==2)
+            {
+                return 1;
+            }
+            else{
+                var a,b,c;
+                b=fib(n-1);
+                c=fib(n-2);
+                a=b+c;
+                return a;
+            }
+        }
+        x=fib(f);
+        document.write(a);
+
+
+
+
+
+//非递归
+
+
+  </script>
+</body>
+</html>
