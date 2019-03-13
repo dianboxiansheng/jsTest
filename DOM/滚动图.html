@@ -17,9 +17,41 @@
         overflow: hidden;
         position: relative;
     }
-    .active{
-        background-color: red;
+    #btn-box .active{
+        background: red;
     }
+    #img-box{
+        width: 3750px;
+        position: absolute;
+        left:0px;
+        top:0px;
+        transition: left 1s ease;
+    }
+    #img-box img
+    {
+        float:left;
+    }
+    #btn-box{
+        right: 10px;
+        bottom:10px;
+        list-style: none;
+        position: absolute;
+
+    }
+    #btn-box li{
+        background: rgba(0,0,0,0.4);
+        color:white;
+        width:20px;
+        height: 20px;
+        float: left;
+        border-radius: 5px;
+        line-height: 20px;
+        margin-right: 5px;
+        cursor: pointer;
+        text-align: center;
+
+    }
+
 
 
 
@@ -39,11 +71,11 @@
             <img src="img/5.jpg">
         </div>
         <ul id="btn-box">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
         </ul>
         <span id="prev"></span>
         <span id="next"></span>
@@ -51,8 +83,24 @@
 
 
     <script>
-    var dd=document.getElementById("11")
-    dd.style.color="green";
+    var ali=document.getElementsByTagName("li");
+    var oimgbox=document.getElementById("img-box");
+    for(var i=0;i<ali.length;i++)
+    {
+        ali[i].index=i;
+        ali[i].onclick=function()
+        {
+            for(var j=0;j<ali.length;j++)
+            {
+                ali[j].className="";
+            }
+            this.className="active";
+            oimgbox.style.left=-this.index*750+"px";
+        }
+    }
+
+
+
 
     </script>
 </body>

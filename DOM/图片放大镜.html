@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .imgbox{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+        }
+        #imgbox1{
+            position: relative;
+        }
+        #imgbox2{
+            display: none;
+        }
+        #smallbox1{
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.4);
+            position: absolute;
+            display: none;
+            top: 0px;
+            left: 0px;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="imgbox1" class="imgbox">
+    <img src="放大镜\imgs\1.jpg">
+    <span id="smallbox1"></span>
+    </div>
+
+    <div id="imgbox2" class="imgbox">
+    <img src="放大镜\imgs\2.jpg">
+    </div>
+
+    <script>
+        var oimg1=document.getElementById("imgbox1");
+        var osbox1=document.getElementById("smallbox1");
+        oimg1.onmouseover=function()
+        {
+            osbox1.style.display="block";
+        }
+    </script>
+</body>
+</html>
