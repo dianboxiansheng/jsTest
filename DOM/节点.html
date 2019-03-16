@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="div1"><span>hahah</span></div>
+        <ul id="ul1">
+            <li id="li1">aaa</li>
+            <!-- ygyggjh -->
+            <li id="li2">bbb</li>
+        </ul>
+        <!-- dftgyhujk -->
+    <script>
+        var oDiv1 = document.getElementById('div1');
+
+        console.log(oDiv1.nodeType);
+        console.log(oDiv1.firstChild.nodeType);
+
+        console.log(oDiv1.nodeName); //DIV
+        console.log(oDiv1.firstChild.nodeName);  //#text
+
+        console.log(oDiv1.nodeValue); //DIV
+        console.log(oDiv1.firstChild.nodeValue);  //#text
+        console.log(oDiv1.firstChild.firstChild.nodeValue);
+    </script>
+</body>
+</html>
